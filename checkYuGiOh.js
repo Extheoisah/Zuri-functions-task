@@ -6,7 +6,8 @@ function checkYuGiOh (n) {
 
     //checks and conditions for errors
     if (isNaN(n) || Array.isArray(n) || typeof (n) === 'object' || typeof (n) === 'undefined' || typeof (n) === 'boolean') {
-        return `invalid parameter: ${errorArgs}`
+        let errorMessage = console.log(`invalid parameter: ${errorArgs}`);
+        return errorMessage;
     }
     
     //iterates through the array "arr"
@@ -34,15 +35,22 @@ function checkYuGiOh (n) {
             arr.push(i);
         }
     }
-    return arr;
+    let result = console.log(arr)
+    return result;
 }
 
 //tests
-let number = checkYuGiOh(5);
-let number1 = checkYuGiOh(10);
-let number2 = checkYuGiOh(30);
-let number3 = checkYuGiOh("Fissbuzz is meh");
-console.log(number);
-console.log(number1);
-console.log(number2);
-console.log(number3);
+ checkYuGiOh(5);
+ checkYuGiOh(10);
+ checkYuGiOh("30");
+ checkYuGiOh([]);
+ checkYuGiOh({});
+ checkYuGiOh("fizzbuzz is meh");
+// let number = checkYuGiOh(5);
+// let number1 = checkYuGiOh(10);
+// let number2 = checkYuGiOh(30);
+// let number3 = checkYuGiOh("Fissbuzz is meh");
+// console.log(number);
+// console.log(number1);
+// console.log(number2);
+// console.log(number3);
